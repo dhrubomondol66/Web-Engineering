@@ -1,0 +1,221 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Page Title */
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #005f8f;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #3498db, #8e44ad);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: #005f8f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.navbar .logo-link img {
+    height: 45px;
+    width: auto;
+    border-radius: 6px;
+}
+
+/* Brand name */
+.navbar .brand {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    margin-left: 12px;
+    flex-grow: 1;
+}
+
+/* Navigation links */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding: 8px;
+}
+
+.navbar ul li a:hover {
+    color: #f1c40f;
+    border-bottom: 2px solid #f1c40f;
+}
+
+/* Dropdown */
+.dropdown a {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    color: #333;
+    min-width: 150px;
+    right: 0;
+    top: 100%;
+    border-radius: 6px;
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background: #f1f1f1;
+    color: #005f8f;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .navbar .brand {
+        margin: 10px 0;
+    }
+}
+
+
+
+/* Doctor List Layout */
+.doctor-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Doctor Profile Card */
+.doctor-profile {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 5px solid #3498db;
+}
+
+.doctor-profile:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Doctor Name */
+.doctor-profile h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* Doctor Details */
+.doctor-profile p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+.doctor-profile strong {
+    color: #005f8f;
+}
+
+/* Button Style (if you add actions later) */
+button {
+    display: inline-block;
+    padding: 10px 16px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .doctor-profile {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,99 @@
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.download-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.download-container:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#invoice {
+    width: 100%;
+    background-color: #f9fafc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    margin-top: 20px;
+}
+
+.patient-info,
+.doctor-info {
+    margin-bottom: 15px;
+}
+
+.info-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.info-value {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.download-btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.download-btn:focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .download-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    .info-label {
+        font-size: 16px;
+    }
+
+    .info-value {
+        font-size: 14px;
+    }
+}

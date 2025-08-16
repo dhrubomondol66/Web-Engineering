@@ -1,0 +1,177 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0077cc;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+}
+
+.navbar .brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-left: -850px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+    transition: background 0.2s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+a img {
+  height: 60px;  /* adjust as needed */
+  width: 60px;   /* adjust as needed */
+  object-fit: contain; /* keeps proportions inside the box */
+}
+
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgb(34, 79, 241);
+    min-width: 160px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #1145ff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Page Header */
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* User Details */
+.user-details {
+    background-color: #f9f9f9;
+    padding: 25px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 10000px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+}
+
+.user-details h1 {
+    color: #0077cc;
+}
+
+.user-details p {
+    font-size: 1rem;
+    margin: 8px 0;
+}
+
+.user-details a {
+    display: inline-block;
+    background-color: #0077cc;
+    color: white;
+    padding: 8px 14px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.user-details a:hover {
+    background-color: #005fa3;
+}
+
+/* Container for tables */
+.profile-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #0077cc;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Section Headings */
+.payment-history h2,
+.prescription-history h2 {
+    margin-top: 20px;
+    color: #0077cc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .user-details, .profile-container {
+        width: 95%;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+    }
+}

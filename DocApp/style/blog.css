@@ -1,0 +1,72 @@
+/* Variables */
+:root {
+  --fros-blue-color: #1c60e8;
+  --light-blue-color: #16c5ff;
+  --dark-color: #202020;
+  --light-gray: #dedede;
+  --dark-gray: #a1a1a0;
+  --light-color: #fff;
+  --poppins-font: 'Poppins', sans-serif;
+  --transition: all 0.3s ease-in-out;
+  --box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+h1 {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--dark-color);
+  font-family: var(--poppins-font);
+}
+
+/* Blog Section */
+section {
+  padding: 30px 20px;
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-item {
+  background: #89bfe6;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.blog-title {
+  padding: 12px 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #08478c;
+  background: #89bfe6;
+}
+
+.blog-title:hover {
+  background: #2c91e5;
+  color: white;
+}
+
+.blog-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  color: #333;
+  font-size: 0.95rem;
+  background: #f9f9f9;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+/* Show content on hover */
+.blog-item:hover .blog-content {
+  max-height: 200px; /* enough space to show text */
+  padding: 12px 15px;
+}
+
+
