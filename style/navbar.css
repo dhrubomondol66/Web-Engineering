@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* Variables */
+:root {
+  --fros-blue-color: #1c60e8;
+  --light-blue-color: #16c5ff;
+  --dark-color: #202020;
+  --light-gray: #dedede;
+  --dark-gray: #a1a1a0;
+  --light-color: #fff;
+  --poppins-font: 'Poppins', sans-serif;
+  --transition: all 0.3s ease-in-out;
+  --box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2)!important;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-family: var(--poppins-font);
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+/* Utility */
+.bg-blue {
+  background-color: var(--fros-blue-color);
+}
+.bg-white {
+  background-color: var(--light-color);
+}
+.text-white {
+  color: var(--light-color);
+}
+.text-center {
+  text-align: center;
+}
+
+/* Container & Layout */
+.container {
+  max-width: 95vw;
+  margin: auto;
+  padding: 0 1rem;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.grid {
+  display: grid;
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.5rem 1.2rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: var(--transition);
+  cursor: pointer;
+  text-align: center;
+}
+.btn-white {
+  background-color: #fff;
+  color: var(--fros-blue-color);
+  border-color: #007BFF;
+}
+.btn-white:hover {
+  color: #b6b5b5;
+  background-color: #ffffff;
+}
+.btn-light-blue {
+  background-color: #007BFF;
+  color: #fff;
+  border-color: #007BFF;
+}
+.btn-light-blue:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.separator {
+  color: #eee;
+  font-weight: 500;
+}
+
+/* Header / Navbar */
+.header {
+  min-height: 0vh;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--fros-blue-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.navbar .container {
+  justify-content: space-between;
+}
+.DocApp_logo_left {
+  width: 80px;
+  margin-left: -10px;
+}
+
+/* Toggle Buttons */
+.navbar-show-btn,
+.navbar-hide-btn {
+  background: none;
+  border: none;
+  width: 30px;
+  transition: var(--transition);
+}
+.navbar-show-btn:hover,
+.navbar-hide-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Collapsible Menu (Mobile) */
+.navbar-collapse {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 80%;
+  background-color: white;
+  transform: translateX(100%);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 2rem;
+  box-shadow: var(--box-shadow);
+  z-index: 1000;
+}
+.navbar-show {
+  transform: translateX(0);
+}
+.navbar-hide-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+.navbar-nav {
+  margin-top: 2rem;
+}
+.nav-item {
+  margin-bottom: 1.6rem;
+}
+
+/* Navbar Links */
+.nav-link {
+  font-weight: bold;
+  color: white !important;
+  font-size: 1.6rem;
+  transition: var(--transition);
+}
+.nav-link:hover {
+  color: #dedede;
+  transform: translateY(-2px);
+}
+
+/* User Menu */
+.user-menu {
+  position: relative;
+}
+.user-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.user-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.username {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  min-width: 200px;
+  z-index: 1001;
+}
+.user-menu:hover .dropdown {
+  display: block;
+}
+.dropdown a,
+.logout-btn {
+  display: block;
+  padding: 0.5rem 0;
+  color: var(--dark-color);
+  font-weight: 500;
+  text-align: left;
+}
+.logout-btn {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0;
+  font-weight: bold;
+  color: red;
+  cursor: pointer;
+}
+
+/* Responsive (Desktop Layout) */
+@media (min-width: 768px) {
+  .navbar-collapse {
+    position: static;
+    transform: none;
+    background: none;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .navbar-nav {
+    display: flex;
+    gap: 2rem;
+    margin-left: auto;
+    align-items: center;
+  }
+
+  .navbar-show-btn,
+  .navbar-hide-btn {
+    display: none;
+  }
+
+  .btn-group {
+    gap: 1rem;
+  }
+
+  .btn-group .btn {
+    width: auto;
+    margin: 0;
+  }
+
+  .separator {
+    margin: 0;
+  }
+}
